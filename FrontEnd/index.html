@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Byte & Bun — Integrado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Byte &amp; Bun Lanchonete</h1>
+  
+
+
+<section class="Pao" id="sectionPao2">
+  
+    <label>
+     
+      <h1 id="pao" >Escolha o pão:</h1>
+      <select id="selectPao">
+      </select>
+    </label> 
+    <section class="imagens">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVostGWmt_quwo6SLFib4L4kxfPp61YfqNJ-KjlG2llQ&s=10">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGuwXGUTw3L9xJQqt-gs1aZojsvXi7dokE5x8AWCSprw&s=10">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bJyIVSIzyowsAlIid3f5i0okzehehQnpte53aegsKw&s=10">
+   
+</section id="sectionPao">
+<section class="textos">
+      <h1 id="poes">Francês - R$ 1,50</h1>
+      <h1 id="poes2">Integral - R$ 2,00</h1>
+      <h1 id="poes3">Ciabatta - R$ 2,50</h1>
+</section>
+ <button id="btnSelectPao">Selecionar</button>
+</section>
+
+<section id="sectionRecheio">
+    <label>
+        <h1 id="recheio" >Escolha o recheio:</h1>
+      <select id="selectRecheio">
+        <option value="Frango">Frango</option>
+        <option value="Carne">Carne</option>
+        <option value="Vegetariano">Vegetariano</option>
+      </select>
+    </label>
+    <section class="textos">
+      <h1 id="poes">Frango - R$ 5,00</h1>
+      <h1 id="poes2">Carne - R$ 6,50</h1>
+      <h1 id="poes3">Vegetariano - R$ 4,00</h1>
+</section>
+     <button id="btnSelectRecheio">Selecionar</button>
+</section>
+
+<section id="sectionMolho">
+    <label>
+      <h1 id="molho" >Escolha o molho:</h1>
+      <select id="selectMolho">
+        <option value="Maionese">Maionese</option>
+        <option value="Mostarda">Mostarda</option>
+        <option value="Especial">Especial</option>
+      </select>
+    </label>
+    <section class="textos">
+      <h1 id="poes">Maionese - R$ 0,50</h1>
+      <h1 id="poes2">Mostarda - R$ 0,50</h1>
+      <h1 id="poes3">Especial - R$ 1,50</h1>
+</section>
+    <button id="btnSelectMolho">Selecionar</button>
+</section>
+
+
+    <button id="btnCalcularPedido">Calcular Pedido</button>
+    <p id="cupom"></p>
+
+    <!-- Os <select> acima comecam vazios de proposito: -->
+    <!-- eles vao ser preenchidos pelo script.js, com dados vindos do servidor. -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

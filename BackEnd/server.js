@@ -1,14 +1,24 @@
 // Aula 03 - Byte & Bun Lanchonete
 // GABARITO - Backend
 // Uso exclusivo do docente - nao distribuir aos alunos.
-
 const express = require("express");
 const cors = require("cors");
+
 const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Servidor funcionando!");
+});
+
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
+});
 
 app.use(cors());
 app.use(express.json());
-
 
 const cardapio = [
   { categoria: "pao", nome: "Frances", preco: 1.5 },
@@ -38,7 +48,7 @@ app.get("/cardapio/:categoria", (req, res) => {
 
 function buscarPreco(categoria, nome) {
   const item = cardapio.find(
-    (item) => item.categoria === categoria && item.nome === nome
+    (item) => item.categoria === categoria && item.nome === nome,
   );
   return item ? item.preco : 0;
 }

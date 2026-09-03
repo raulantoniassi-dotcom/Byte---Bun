@@ -3,9 +3,7 @@
 // Conectando Frontend e Backend (fetch + CORS)
 // Uso exclusivo do docente - nao distribuir aos alunos.
 // ============================================================
-
 const URL_API = "http://localhost:3000";
-
 const cupom = document.querySelector("#cupom");
 
 // ---------- Exercicios 1 e 3: buscar o cardapio e popular os selects ----------
@@ -72,4 +70,33 @@ document.querySelector("#btnCalcularPedido").addEventListener("click", async fun
   } catch (erro) {
     cupom.textContent = "Não foi possível enviar o pedido. O servidor está rodando?";
   }
+});
+
+
+
+
+// buttons
+const btnSelectPao = document.querySelector("#btnSelectPao");
+const btnSelectRecheio = document.querySelector("#btnSelectRecheio");
+const btnSelectMolho = document.querySelector("#btnSelectMolho");
+const sectionPao = document.querySelector("#sectionPao2"); 
+const sectionRecheio = document.querySelector("#sectionRecheio");
+const sectionMolho = document.querySelector("#sectionMolho");
+
+btnSelectPao.addEventListener("click", function () {
+  sectionPao.hidden = true;
+sectionRecheio.hidden = false;
+
+});
+
+btnSelectRecheio.addEventListener("click", function () {
+  const selectRecheio = document.querySelector("#selectRecheio");
+  const recheioSelecionado = selectRecheio.value;
+  alert(`Você selecionou o recheio: ${recheioSelecionado}`);
+});
+
+btnSelectMolho.addEventListener("click", function () {
+  const selectMolho = document.querySelector("#selectMolho");
+  const molhoSelecionado = selectMolho.value;
+  alert(`Você selecionou o molho: ${molhoSelecionado}`);
 });

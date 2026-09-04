@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e0dfdf;
+  color: #0c0c0c;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+#tituloPrincipal{
+  background-color: #7e2121;
+  width: 100%;
+  height: 100px;
+}
+#titulo  {
+position: relative;
+  text-align: center;
+  margin-top: -33px;
+  font-family: 'Brush Script MT';
+  font-size: 100px;
+  color: #e48c8c;
+}
+
+.tituloPequeno {
+  position: relative;
+  margin-top: -20px;
+  font-size: 30px;
+  color: #e48c8c;
+  background-color: #7e2121;
+  width: 100%;
+}
+
+#imgF,
+#imgC,
+#imgI {
+  border-radius: 16px;
+  display: table-row;
+}
+#pao,
+#recheio,
+#molho {
+  font-family: fantasy;
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  text-align: start;
+  color: #e48c8c;
+}
+
+
+section {
+
+  background-color: #fffefe;
+  border: 0px solid #d8e6e2;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin: 20px 0;
+}
+
+.imagens1 {
+  border: 0px solid #d8e6e2;
+  height: 200px;
+  width: 650px;
+  display: flex;
+  gap: 20px;
+}
+
+.imagens1 img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+}
+
+.Pao {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.textos {
+  gap: 60px;
+  border: 0px solid #d8e6e2;
+  position: relative;
+  margin-top: -40px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#poes,
+#poes2,
+#poes3 {
+
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  color: #a54444;
+  margin-top: 10px;
+  flex-direction: column;
+
+}
+
+#carnes,
+#carnes2,
+#carnes3 {
+
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  color: #5c5c5c;
+  margin-top: 10px;
+  flex-direction: column;
+
+}
+
+.recheio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.molho {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 16px;
+  color: #7e2121;
+  margin-top: 0;
+}
+
+.explicacao {
+  color: #5a6b72;
+  font-style: italic;
+}
+
+button {
+  font-family: fantasy;
+  background-color: #7e2121;
+  color: #e48c8c;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 4px 4px 4px 0;
+}
+
+button:hover {
+  background-color: #3fbf9c;
+}
+
+input,
+select {
+  font-size: 15px;
+  padding: 6px 8px;
+  margin: 4px 8px 4px 0;
+  border: 1px solid #d8e6e2;
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#cupom {
+  white-space: pre-line;
+  font-size: 20px;
+  font-family: monospace;
+  color: #7e2121;
+}

@@ -3,7 +3,7 @@
 // Conectando Frontend e Backend (fetch + CORS)
 // Uso exclusivo do docente - nao distribuir aos alunos.
 // ============================================================
-const URL_API = "http://localhost:3000";
+const URL_API = "https://byteandbun.onrender.com";
 const cupom = document.querySelector("#cupom");
 
 // ---------- Exercicios 1 e 3: buscar o cardapio e popular os selects ----------
@@ -66,6 +66,7 @@ document.querySelector("#btnCalcularPedido").addEventListener("click", async fun
       `Pão: ${dados.itens.pao}\n` +
       `Recheio: ${dados.itens.recheio}\n` +
       `Molho: ${dados.itens.molho}\n` +
+      `----------------------------\n` +
       `Total: R$ ${totalFormatado}`;
   } catch (erro) {
     cupom.textContent = "Não foi possível enviar o pedido. O servidor está rodando?";
@@ -79,7 +80,7 @@ document.querySelector("#btnCalcularPedido").addEventListener("click", async fun
 const btnSelectPao = document.querySelector("#btnSelectPao");
 const btnSelectRecheio = document.querySelector("#btnSelectRecheio");
 const btnSelectMolho = document.querySelector("#btnSelectMolho");
-const sectionPao = document.querySelector("#sectionPao2"); 
+const sectionPao = document.querySelector("#sectionPao"); 
 const sectionRecheio = document.querySelector("#sectionRecheio");
 const sectionMolho = document.querySelector("#sectionMolho");
 
@@ -90,13 +91,10 @@ sectionRecheio.hidden = false;
 });
 
 btnSelectRecheio.addEventListener("click", function () {
-  const selectRecheio = document.querySelector("#selectRecheio");
-  const recheioSelecionado = selectRecheio.value;
-  alert(`Você selecionou o recheio: ${recheioSelecionado}`);
+  sectionRecheio.hidden = true;
+sectionMolho.hidden = false;
 });
 
 btnSelectMolho.addEventListener("click", function () {
-  const selectMolho = document.querySelector("#selectMolho");
-  const molhoSelecionado = selectMolho.value;
-  alert(`Você selecionou o molho: ${molhoSelecionado}`);
+ sectionMolho.hidden = true;
 });

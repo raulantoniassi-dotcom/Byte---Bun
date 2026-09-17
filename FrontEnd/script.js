@@ -1,8 +1,4 @@
-// ============================================================
-// GABARITO - Aula 03 - Byte & Bun Lanchonete
-// Conectando Frontend e Backend (fetch + CORS)
-// Uso exclusivo do docente - nao distribuir aos alunos.
-// ============================================================
+
 const URL_API = "https://byteandbun.onrender.com";
 const cupom = document.querySelector("#cupom");
 
@@ -16,13 +12,6 @@ function popularSelect(idSelect, itens) {
     select.appendChild(option);
   });
 }
-
-// for (let i = 0; i < itens.length; i++) {
-//     const item = itens[i];
-//     const option = document.createElement("option");
-//     option.value = item.nome;
-//     option.textContent = `${item.nome} — R$ ${item.preco.toFixed(2).replace(".", ",")}`;
-//     select.appendChild(option);
 
 async function carregarCardapio() {
   try {
@@ -98,3 +87,5 @@ sectionMolho.hidden = false;
 btnSelectMolho.addEventListener("click", function () {
  sectionMolho.hidden = true;
 });
+
+

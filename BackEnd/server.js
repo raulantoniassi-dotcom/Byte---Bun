@@ -1,24 +1,11 @@
-// Aula 03 - Byte & Bun Lanchonete
-// GABARITO - Backend
-// Uso exclusivo do docente - nao distribuir aos alunos.
+
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
-
 app.use(express.json());
 app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Servidor funcionando!");
-});
-
-app.listen(3000, () => {
-  console.log("Servidor rodando na porta 3000");
-});
-
-app.use(cors());
-app.use(express.json());
+const PORT = 3000;
+const calcularFrete = require("./Frete");
 
 const cardapio = [
   { categoria: "pao", nome: "Frances", preco: 1.5 },
@@ -73,6 +60,20 @@ app.post("/pedido", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.post("/frete", (req, res) => {
+  const { valorPedido } = req.body;
+
+  if (typeof valorPedido !== "number" || Number.isNaN(valorPedido)) {
+    return res.status(400).json({ erro: "Erro: Seu pedido deve ser um número." });
+  }
+  const valorFinal = calcularFrete(valorPedido);
+
+  return res.json({
+    mensagem: `Seu pedido ficou R$ ${valorFinal}.`
+  })
+
+  });
+
+app.listen(PORT, () => {
   console.log("Servidor rodando em http://localhost:3000");
 });

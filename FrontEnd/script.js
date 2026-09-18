@@ -91,6 +91,7 @@ const btnSelectMolho = document.querySelector("#btnSelectMolho");
 const sectionPao = document.querySelector("#sectionPao"); 
 const sectionRecheio = document.querySelector("#sectionRecheio");
 const sectionMolho = document.querySelector("#sectionMolho");
+const btnCalculo = document.getElementById("Final");
 
 btnSelectPao.addEventListener("click", function () {
   sectionPao.hidden = true;
@@ -105,6 +106,7 @@ sectionMolho.hidden = false;
 
 btnSelectMolho.addEventListener("click", function () {
  sectionMolho.hidden = true;
+ btnCalculo.hidden = false;
 });
 
 

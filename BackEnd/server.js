@@ -1,11 +1,11 @@
-
 const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors());
 const PORT = 3000;
-const calcularFrete = require("./Frete");
+const calcularFrete = require("./Functions");
+const buscarPreco = require("./Functions");
 
 const cardapio = [
   { categoria: "pao", nome: "Frances", preco: 1.5 },
@@ -33,13 +33,6 @@ app.get("/cardapio/:categoria", (req, res) => {
   res.json(filtrados);
 });
 
-function buscarPreco(categoria, nome) {
-  const item = cardapio.find(
-    (item) => item.categoria === categoria && item.nome === nome,
-  );
-  return item ? item.preco : 0;
-}
-
 app.post("/pedido", (req, res) => {
   const { pao, recheio, molho } = req.body;
 
@@ -64,15 +57,16 @@ app.post("/frete", (req, res) => {
   const { valorPedido } = req.body;
 
   if (typeof valorPedido !== "number" || Number.isNaN(valorPedido)) {
-    return res.status(400).json({ erro: "Erro: Seu pedido deve ser um número." });
+    return res
+      .status(400)
+      .json({ erro: "Erro: Seu pedido deve ser um número." });
   }
   const valorInicial = calcularFrete(valorPedido);
-  const valorFinal = valorInicial.Inicial.toFixed(2).replace(".", ",");
+  const valorFinal = valorInicial.toFixed(2).replace(".", ",");
   return res.json({
-    mensagem: `Frete: R$${valorFinal}.`
-  })
-
+    mensagem: `Frete: R$${valorFinal}.`,
   });
+});
 
 app.listen(PORT, () => {
   console.log("Servidor rodando em http://localhost:3000");

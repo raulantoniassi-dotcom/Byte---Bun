@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -7,75 +7,83 @@
   </head>
   <body>
     <h1>Byte &amp; Bun Lanchonete</h1>
-  
 
+    <section class="Pao" id="sectionPao">
+      <label>
+        <h1 id="pao">Escolha o pão:</h1>
+        <select id="selectPao"></select>
+      </label>
+      <section class="imagens">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVostGWmt_quwo6SLFib4L4kxfPp61YfqNJ-KjlG2llQ&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGuwXGUTw3L9xJQqt-gs1aZojsvXi7dokE5x8AWCSprw&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bJyIVSIzyowsAlIid3f5i0okzehehQnpte53aegsKw&s=10"
+        />
+      </section>
+      <section class="textos">
+        <h1 id="poes">Francês - R$ 1,50</h1>
+        <h1 id="poes2">Integral - R$ 2,00</h1>
+        <h1 id="poes3">Ciabatta - R$ 2,50</h1>
+      </section>
+      <button id="btnSelectPao">Selecionar</button>
+    </section>
 
-<section class="Pao" id="sectionPao">
-  
-    <label>
-     
-      <h1 id="pao" >Escolha o pão:</h1>
-      <select id="selectPao">
-      </select>
-    </label> 
-    <section class="imagens">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVostGWmt_quwo6SLFib4L4kxfPp61YfqNJ-KjlG2llQ&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGuwXGUTw3L9xJQqt-gs1aZojsvXi7dokE5x8AWCSprw&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bJyIVSIzyowsAlIid3f5i0okzehehQnpte53aegsKw&s=10">
-   
-</section>
-<section class="textos">
-      <h1 id="poes">Francês - R$ 1,50</h1>
-      <h1 id="poes2">Integral - R$ 2,00</h1>
-      <h1 id="poes3">Ciabatta - R$ 2,50</h1>
-</section>
- <button id="btnSelectPao">Selecionar</button>
-</section>
+    <section class="Pao" id="sectionRecheio" hidden>
+      <label>
+        <h1 id="recheio">Escolha o recheio:</h1>
+        <select id="selectRecheio"></select>
+      </label>
+      <section class="imagens">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSV6CK4glp1-PrjWdsNXH8GmDV9oBL20Sw-GLWT5Xow&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCzIcZ2meyEl6uRObWPVlrZb0h1A836pZlF5uX7H2YvQ&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwyV1NXvMYrTfCRPwog45wjSHebct-E_r9gLR_UtxjQ&s=10"
+        />
+      </section>
+      <section class="textos">
+        <h1 id="poes">Frango - R$ 5,00</h1>
+        <h1 id="poes2">Carne - R$ 6,50</h1>
+        <h1 id="poes3">Vegetariano - R$ 4,00</h1>
+      </section>
+      <button id="btnSelectRecheio">Selecionar</button>
+    </section>
 
-<section class="Pao" id="sectionRecheio" hidden>
-    <label>
-        <h1 id="recheio" >Escolha o recheio:</h1>
-      <select id="selectRecheio">
-      </select>
-    </label>
-        <section class="imagens">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSV6CK4glp1-PrjWdsNXH8GmDV9oBL20Sw-GLWT5Xow&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCzIcZ2meyEl6uRObWPVlrZb0h1A836pZlF5uX7H2YvQ&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwyV1NXvMYrTfCRPwog45wjSHebct-E_r9gLR_UtxjQ&s=10">
-   
-</section>
-    <section class="textos">
-      <h1 id="poes">Frango - R$ 5,00</h1>
-      <h1 id="poes2">Carne - R$ 6,50</h1>
-      <h1 id="poes3">Vegetariano - R$ 4,00</h1>
-</section>
-     <button id="btnSelectRecheio">Selecionar</button>
-</section>
+    <section class="Pao" id="sectionMolho" hidden>
+      <label>
+        <h1 id="molho">Escolha o molho:</h1>
+        <select id="selectMolho"></select>
+      </label>
+      <section class="imagens">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfSe44FrpEb1O0uAg0XG8lm5X8GqGOOpiwnMh2WHsrw&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoyrYPF5DBe9xfpJoODKpY96goSWFt_Eo91XOYpcw6rQ&s=10"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKqZ7U3vMBKEpaFj6UbkUgoz3_G47HbcyveC_ErQ0sQ&s=10"
+        />
+      </section>
+      <section class="textos">
+        <h1 id="poes">Maionese - R$ 0,50</h1>
+        <h1 id="poes2">Mostarda - R$ 0,50</h1>
+        <h1 id="poes3">Especial - R$ 1,50</h1>
+      </section>
+      <button id="btnSelectMolho">Selecionar</button>
+    </section>
 
-<section  class="Pao" id="sectionMolho" hidden>
-    <label>
-      <h1 id="molho" >Escolha o molho:</h1>
-      <select id="selectMolho">
-      </select>
-    </label>
-        <section class="imagens">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfSe44FrpEb1O0uAg0XG8lm5X8GqGOOpiwnMh2WHsrw&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoyrYPF5DBe9xfpJoODKpY96goSWFt_Eo91XOYpcw6rQ&s=10">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKqZ7U3vMBKEpaFj6UbkUgoz3_G47HbcyveC_ErQ0sQ&s=10">
-   
-</section>
-    <section class="textos">
-      <h1 id="poes">Maionese - R$ 0,50</h1>
-      <h1 id="poes2">Mostarda - R$ 0,50</h1>
-      <h1 id="poes3">Especial - R$ 1,50</h1>
-</section>
-    <button id="btnSelectMolho">Selecionar</button>
-</section>
-
-<div id="Final" hidden>
-    <button id="btnCalcularPedido">Calcular Pedido</button>
-    <p id="cupom"></p>
-</div>
+    <div id="Final" hidden>
+      <button id="btnCalcularPedido">Calcular Pedido</button>
+      <p id="cupom"></p>
+    </div>
 
     <script src="script.js"></script>
   </body>

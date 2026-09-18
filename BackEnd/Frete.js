@@ -1,12 +1,14 @@
 
+
 function calcularFrete(pedido) {
   const frete = 5;
 
-  if (pedido >= 7 && pedido < 10) {
+  if (pedido >= 5) {
     return pedido + frete;
   }
 
-  return pedido;
+  const msgFrete = `Frete: R$${pedido}`
+  return msgFrete;
 };
 
 module.exports = calcularFrete;

@@ -69,7 +69,7 @@ app.post("/frete", (req, res) => {
   const valorFinal = calcularFrete(valorPedido);
 
   return res.json({
-    mensagem: `Seu pedido ficou R$ ${valorFinal}.`
+    mensagem: `Frete: R$${valorFinal}.`
   })
 
   });

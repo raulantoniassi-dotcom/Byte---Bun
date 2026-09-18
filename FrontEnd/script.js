@@ -48,16 +48,35 @@ document.querySelector("#btnCalcularPedido").addEventListener("click", async fun
       return;
     }
 
+
     const dados = await resposta.json();
     const totalFormatado = dados.total.toFixed(2).replace(".", ",");
+    let mensagemFrete = "Não foi possível calcular o frete."
+    try{
+      const respostaFrete = await fetch(`${URL_API}/frete`, {
+        method: "POST",
+        headers : {"Content-type": "application/json"},
+        body: JSON.stringify({ valorPedido: dados.total }),
+      })
+    
+      if (respostaFrete.ok){
+        const dadosFrete = await respostaFrete.json();
+        mensagemFrete = dadosFrete.mensagem;
+      }
+   }  catch (errorFrete) {
+    console.error("Erro ao buscar frete:", errorFrete);
+   }
 
     cupom.textContent =
       `Pão: ${dados.itens.pao}\n` +
       `Recheio: ${dados.itens.recheio}\n` +
       `Molho: ${dados.itens.molho}\n` +
       `----------------------------\n` +
-      `Total: R$ ${totalFormatado}`;
+      `Total: R$ ${totalFormatado}\n` +
+      `Frete: R$${mensagemFrete}`;
+
   } catch (erro) {
+    console.error("Erro ao enviar o pedido", erro);
     cupom.textContent = "Não foi possível enviar o pedido. O servidor está rodando?";
   }
 });

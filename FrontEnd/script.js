@@ -73,7 +73,7 @@ document.querySelector("#btnCalcularPedido").addEventListener("click", async fun
       `Molho: ${dados.itens.molho}\n` +
       `----------------------------\n` +
       `Total: R$ ${totalFormatado}\n` +
-      `Frete: R$${mensagemFrete}`;
+      `${mensagemFrete}`;
 
   } catch (erro) {
     console.error("Erro ao enviar o pedido", erro);

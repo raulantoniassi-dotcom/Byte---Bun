@@ -66,8 +66,8 @@ app.post("/frete", (req, res) => {
   if (typeof valorPedido !== "number" || Number.isNaN(valorPedido)) {
     return res.status(400).json({ erro: "Erro: Seu pedido deve ser um número." });
   }
-  const valorFinal = calcularFrete(valorPedido);
-
+  const valorInicial = calcularFrete(valorPedido);
+  const valorFinal = valorInicial.Inicial.toFixed(2).replace(".", ",");
   return res.json({
     mensagem: `Frete: R$${valorFinal}.`
   })
